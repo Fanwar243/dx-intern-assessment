@@ -10,6 +10,8 @@
 
   <link rel="stylesheet" href="style.css?v=1.0" />
   <link rel="stylesheet" href="custom.css?v=1.0" />
+  <script type="text/javascript" src="zip.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 
 </head>
 
@@ -38,15 +40,26 @@
         </ol>
     </div>
 
+    <div class="upload-wrapper">
+        <h2>Upload your zip here.</h2>
+        <input type="file" name="file" id="file">
+        <button id="extract" onClick="extract()">Extract</button>
+    </div>
+
     <!-- DO NO REMOVE CODE STARTING HERE -->
     <div class="display-wrapper">
         <h2 style="margin-top:51px;">My images</h2>
         <div class="append-images-here">
-            <p>No image found. Your extracted images should be here.</p>
+            <p id="noImage">No image found. Your extracted images should be here.</p>
+            <p id="tooBig" style="display:none">Your zip file does not contain 5 images!</p>
             <!-- THE IMAGES SHOULD BE DISPLAYED INSIDE HERE -->
+            <img id="image1" style="width:600px;height:400px;" alt="Image 1">
+            <img id="image2" style="width:600px;height:400px;" alt="Image 2">
+            <img id="image3" style="width:600px;height:400px;" alt="Image 3">
+            <img id="image4" style="width:600px;height:400px;" alt="Image 4">
+            <img id="image5" style="width:600px;height:400px;" alt="Image 5">
         </div>
     </div>
     <!-- DO NO REMOVE CODE UNTIL HERE -->
-
 </body>
 </html>
