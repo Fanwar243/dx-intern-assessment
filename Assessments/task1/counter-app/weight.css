@@ -1,0 +1,33 @@
+body {
+    background-color: #1d1d1d ;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+}
+
+h1 {
+    color:yellow;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #337736;
+}
+
+button:active {
+    background-color: #66a069;
+    transform: translateY(3px)
+}

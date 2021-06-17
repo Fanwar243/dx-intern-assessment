@@ -4,14 +4,14 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>DigiX Internship Assessment</title>
+        <link rel="stylesheet" href="weight.css">
     </head>
     <body>
         <div>
-            <div>
-                <h1>Weight Converter App</h1>
-            </div>
+            <h1>Weight Converter App</h1>
             <label for="kg">Weight in kilograms:</label><br>
             <input type="text" id="kg"> <br>
+            <p id="invalid" style="display:none; color:red;">Invalid weight!</p>
             <span>
                 <p>Weight in pounds: </p>
                 <p id="pounds">0.00 lbs</p>
@@ -26,8 +26,15 @@
             function submit() {
                 let kg = document.getElementById("kg").value;
                 let lbs = kg * 2.205;
-                document.getElementById("pounds").innerHTML = `${lbs.toFixed(2)} lbs`;
-                document.getElementById("miligrams").innerHTML = `${kg * 10**6} mg`;
+                let mg = kg * 10**6
+                if (kg >= 0) {
+                    document.getElementById("invalid").style.display = "none";
+                    document.getElementById("pounds").innerHTML = `${lbs.toFixed(2)} lbs`;
+                    document.getElementById("miligrams").innerHTML = `${mg} mg`;
+                } else {
+                    document.getElementById("invalid").style.display = "block";
+                }
+                
             }
         </script>
     </body>
